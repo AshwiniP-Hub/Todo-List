@@ -15,8 +15,18 @@ const TodoList = () => {
 
   const addTodo = () => {
     if (newTodo) {
-      axios
-        .post("/", { text: newTodo })
+
+      axios.post('/', {
+        title: 'New Todo',
+        completed: false,
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+
+      // axios
+      //   .post("/", { text: newTodo })
         .then((res) => {
           setTodos([...todos, res.data]);
           setNewTodo("");
