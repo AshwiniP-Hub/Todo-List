@@ -19,7 +19,6 @@ function Login({ setUser }) {
 
     await axios
     .post("https://goaltracker-jkh3.onrender.com/user/login", userInfo)
-      // .post("http://localhost:5000/user/login", userInfo)
       .then((res) => {
         if (res.data) {
           // Store the JWT token securely in localStorage
