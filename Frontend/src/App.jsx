@@ -1,14 +1,20 @@
 import React from "react";
-import TodoList from "./components/TodoList";
-
+import { Routes, Route } from 'react-router-dom';
+import { Toaster } from "react-hot-toast";
+import Signup from "./components/Signup";
+import Home from "./components/Home";
+import Login from "./components/Login";
 
 const App = () => {
   return (
-    
-    <div className="min-h-screen bg-gray-100 py-8">
-      <h1 className="text-center text-3xl font-bold mb-8">Todo List</h1>
-      <TodoList/>
-    </div>
+    <>
+    <Toaster />
+     <Routes>
+       <Route path="/" element={<Home/>} />
+     <Route path="/Login" element={<Login/>} />
+      <Route path="/Signup" element={<Signup/>} />
+     </Routes>
+    </> 
   );
 };
 

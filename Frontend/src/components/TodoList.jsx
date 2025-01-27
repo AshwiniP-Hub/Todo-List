@@ -15,18 +15,8 @@ const TodoList = () => {
 
   const addTodo = () => {
     if (newTodo) {
-
-      axios.post('/', {
-        title: 'New Todo',
-        completed: false,
-      }, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-
-      // axios
-      //   .post("/", { text: newTodo })
+      axios
+        .post("/", { text: newTodo })
         .then((res) => {
           setTodos([...todos, res.data]);
           setNewTodo("");
@@ -58,7 +48,7 @@ const TodoList = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto">
+    <div className="max-w-lg mx-auto px-8">
       <input
         type="text"
         value={newTodo}
