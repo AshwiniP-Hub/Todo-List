@@ -23,8 +23,7 @@ function Signup() {
       password:data.password,
     }
  
-    await axios.post("https://todo-list-mfz7.onrender.com/user/signup",userInfo)
-    // await axios.post("http://localhost:5000/user/signup",userInfo)
+   await axios.post("https://goaltracker-jkh3.onrender.com/user/signup",userInfo)
     .then((res)=>{
       console.log(res.data)
       if(res.data){
