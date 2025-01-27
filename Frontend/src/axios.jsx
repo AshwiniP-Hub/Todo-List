@@ -1,14 +1,8 @@
-// import axios from "axios";
-
-// const instance = axios.create({
-//   baseURL: "http://localhost:5000/todos",
-// });
-
-// export default instance;
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:5000/todos",
+ baseURL: "https://todo-list-mfz7.onrender.com/todos",
+  // baseURL: "http://localhost:5000/todos",
 });
 
 // Add an interceptor to include the token
