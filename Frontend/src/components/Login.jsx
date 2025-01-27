@@ -18,7 +18,8 @@ function Login({ setUser }) {
     };
 
     await axios
-      .post("http://localhost:5000/user/login", userInfo)
+    .post("https://goaltracker-jkh3.onrender.com/user/login", userInfo)
+      // .post("http://localhost:5000/user/login", userInfo)
       .then((res) => {
         if (res.data) {
           // Store the JWT token securely in localStorage
@@ -44,7 +45,7 @@ function Login({ setUser }) {
     localStorage.removeItem("token"); // Remove token
     localStorage.removeItem("Users"); // Remove user info
     setUser(null); // Clear user state
-    
+
     toast.success("Logged out successfully!");
     setTimeout(() => {
       window.location.reload();
