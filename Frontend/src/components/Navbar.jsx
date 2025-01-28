@@ -76,7 +76,7 @@ const Navbar = () => {
             </div>
           ) : (
             <a
-              className="btn bg-green-500 text-sm sm:text-base md:py-2 md:rounded-lg  text-center px-4 sm:px-6 md:text-xl "
+              className="btn bg-green-500 text-sm  md:py-2 md:rounded-lg  text-center px-4 sm:px-6 md:text-xl "
               onClick={() => document.getElementById("my_modal_3").showModal()}
             >
               Login
